@@ -3,9 +3,8 @@
 
         <messages-component></messages-component>
             
-        <div class="form-group">
-            <textarea @keydown="keydownMessage" placeholder="Sua menagem" class="form-control" v-model="message"></textarea>    
-        </div>  
+        <textarea @keydown="keydownMessage" placeholder="Sua menagem" v-model="message"></textarea>    
+ 
         <button :disabled="loading" type="submit" class="btn btn-success" @click.prevent="sendMessage">
             <pulse-loader :loading="loading" :color="'#fff'" :size="'8px'" class="float-left"></pulse-loader>
             Enviar
@@ -55,4 +54,15 @@ export default {
 
 <style scoped>
 .float-left{float: left;}
+textarea{
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    max-width: 90%;
+    float: left;
+}
+button{
+    margin: 12px 6px;
+}
 </style>
