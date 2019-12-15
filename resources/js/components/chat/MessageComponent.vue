@@ -4,10 +4,13 @@
             <b>{{ message.user.name }}:</b> 
             <span>{{ message.created_at }}</span>
         </div>
-        <div class="chat-img">
+        <div v-if="message.user.image" class="chat-img">
+            <img :src="`/storage/users/${message.user.image}`" :alt="message.user.name">
+        </div>
+        <div v-else class="chat-img">
             <img src="/img/no-image.png" :alt="message.user.name">
         </div>
-        <div class="message owner">
+        <div :class="['message', {'owner': message.owner}]">
             {{ message.body }}
         </div>
     </div>
