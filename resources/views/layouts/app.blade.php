@@ -19,7 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <script>
+    {{--  config Pusher  --}}
+     {{-- <script>
         window.Laravel = {!! json_encode([
             'csrf' => csrf_token(),
             'pusher' => [
@@ -27,7 +28,7 @@
                 'cluster' => config('broadcasting.connections.pusher.options.cluster')
             ]
         ]) !!}
-    </script>
+    </script>  --}}
 
 </head>
 <body>

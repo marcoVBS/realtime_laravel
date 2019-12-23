@@ -43,4 +43,15 @@ class MessageCreated implements ShouldBroadcast
     {
         return new PresenceChannel('chat');
     }
+
+    /**
+     * The event's broadcast name.
+     *
+     * @return string
+     */
+    public function broadcastAs()
+    {
+        return 'message.sent';
+    }
+    
 }

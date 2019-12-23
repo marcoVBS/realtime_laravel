@@ -10,6 +10,6 @@ Echo.join('chat')
     .leaving(user => {
         store.commit('LEAVING_USER', user)
     })
-    .listen('Chat.MessageCreated', e => {
+    .listen('.message.sent', (e) => {                       
         store.commit('ADD_MESSAGE', e.message)
     })
